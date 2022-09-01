@@ -5,6 +5,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
     @Test
+    void should_return_fizz_when_countOff_given_1() {
+        //given
+        int input = 1;
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        //when
+        String output = fizzbuzz.countOff(input);
+        //then
+        assertEquals(output, String.valueOf(input));
+    }
+    @Test
     void should_return_fizz_when_countOff_given_3() {
         //given
         int input = 3;
@@ -71,7 +81,7 @@ public class FizzBuzzTest {
     @Test
     void should_return_fizz_buzz_whizz_when_countOff_given_105() {
         //given
-        int input = 35;
+        int input = 105;
         FizzBuzz fizzbuzz = new FizzBuzz();
         //when
         String output = fizzbuzz.countOff(input);

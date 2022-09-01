@@ -5,14 +5,17 @@ public class FizzBuzz {
     public String BUZZ = "Buzz";
     public String WHIZZ = "Whizz";
     public String countOff(int input) {
-        StringBuilder multipleBy2Numbers = new StringBuilder();
+        StringBuilder fizzBuzzWhizzBuilder = new StringBuilder();
 
-        multipleBy2Numbers
+        fizzBuzzWhizzBuilder
                 .append(Fizz(input) ? FIZZ : "")
                 .append(Buzz(input) ? BUZZ : "")
-                .append(Whizz(input)? WHIZZ: "");
+                .append(Whizz(input) ? WHIZZ: "");
 
-        return String.valueOf(multipleBy2Numbers.toString());
+        if(fizzBuzzWhizzBuilder.toString().isEmpty()) {
+            return String.valueOf(input);
+        }
+        return fizzBuzzWhizzBuilder.toString();
     }
 
     public boolean Fizz(int input) {
