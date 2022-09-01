@@ -47,6 +47,14 @@ public class FizzBuzzTest {
         //then
         assertEquals(output, "FizzBuzz");
     }
-
+    void should_return_fizz_whizz_when_countOff_given_21() {
+        //given
+        int input = 21;
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        //when
+        String output = fizzbuzz.countOff(input);
+        //then
+        assertEquals(output, "FizzWhizz");
+    }
 
 }
