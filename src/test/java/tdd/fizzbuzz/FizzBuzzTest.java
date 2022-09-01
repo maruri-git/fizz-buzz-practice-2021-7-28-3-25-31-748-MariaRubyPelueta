@@ -27,7 +27,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void should_return_whizz_when_coutOff_given_7() {
+    void should_return_whizz_when_countOff_given_7() {
         //given
         int input = 7;
         FizzBuzz fizzbuzz = new FizzBuzz();
@@ -36,4 +36,17 @@ public class FizzBuzzTest {
         //then
         assertEquals(output, "Whizz");
     }
+
+    @Test
+    void should_return_fizz_buzz_when_countOff_given_15() {
+        //given
+        int input = 15;
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        //when
+        String output = fizzbuzz.countOff(input);
+        //then
+        assertEquals(output, "FizzBuzz");
+    }
+
+
 }
