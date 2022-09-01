@@ -9,11 +9,9 @@ public class FizzBuzz {
 
         multipleBy2Numbers
                 .append(Fizz(input) ? FIZZ : "")
-                .append(Fizz(input) ? BUZZ : "");
+                .append(Buzz(input) ? BUZZ : "")
+                .append(Whizz(input)? WHIZZ: "");
 
-        if(input % 7 == 0) {
-            return WHIZZ;
-        }
         return String.valueOf(multipleBy2Numbers.toString());
     }
 
@@ -23,5 +21,9 @@ public class FizzBuzz {
 
     public boolean Buzz(int input) {
         return input % 5 == 0;
+    }
+
+    public boolean Whizz(int input) {
+        return input % 7 == 0;
     }
 }
